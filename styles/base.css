@@ -1,0 +1,227 @@
+/*--------------------
+  Universal Styles
+ ---------------------*/
+
+* {
+  box-sizing: border-box;
+  font-family: georgia;
+}
+
+body {
+  background: #f9f9f9;
+}
+
+/*--------------------
+ Header Styles
+ ---------------------*/
+
+header h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 0.7em auto;
+  width: 90%;
+}
+
+/*--------------------
+ Sign Up Form
+ ---------------------*/
+
+/* main styles and main flex container */
+
+.signUpSheet,
+.informationSheet {
+  width: 90%;
+  background: #D3D3D3;
+  margin: auto;
+  padding: 2.2em;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+
+.signUpForm,
+.informationform {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* spaces between each line on Participant sign up*/
+
+.payment_field,
+.paid_field,
+.arrived_field,
+.signUpForm>label,
+.signUpForm>input {
+  padding: 5px 0;
+}
+
+.payment_field>input {
+  margin-left: 8px;
+}
+
+.paid_field>input {
+  margin-left: 50px;
+}
+
+.arrived_field>input {
+  margin-left: 28.5px;
+}
+
+/* Spaces between information sign up */
+
+.formPadding {
+  padding: 5px 0;
+  margin: 5px;
+}
+
+.classPriceLabel {
+  margin-right: 25%;
+}
+
+.numberOfParticipantsLabel {
+  margin-right: 10.2%;
+}
+
+/* Reset and enter person Buttons */
+
+.form_buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.form_buttons>button {
+  margin-top: 15px;
+  width: 120px;
+  height: 80px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+#enterButton {
+  background: aqua;
+}
+
+.resetButton {
+  background: red;
+}
+
+/* Plus Buttons */
+
+.plusButton {
+  width: 25px;
+}
+
+/*--------------------
+ Class List Form
+ ---------------------*/
+
+.classListForm {
+  border-top: 1px dotted black;
+  width: 90%;
+  margin: auto;
+}
+
+.classList>li {
+  display: block;
+  background-color: #D3D3D3;
+  border: 1px solid black;
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  font-weight: 550;
+  margin-top: 15px;
+  height: 190px; /* Locking the height to have uniform spaces for notes section */
+}
+
+li>span {
+  padding: 5px 0;
+}
+
+.classListCheckbox {
+  display: flex;
+  justify-content: space-between;
+}
+
+.removeIcon {
+  border-radius: 50%;
+  background: lightblue;
+  color: black;
+  position: absolute;
+  right: -5px;
+  top: -10px;
+  text-align: center;
+  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+.personName {
+  font-size: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/*--------------------
+ Media Queries
+ ---------------------*/
+
+@media (min-width: 769px) {
+
+  /*--------------------
+   Forms flex
+   ---------------------*/
+
+   .forms {
+     display: flex;
+     flex: 1;
+   }
+
+  /*--------------------
+   Sign up/information Form
+   ---------------------*/
+
+  .signUpSheet,
+  .informationSheet {
+    max-width: 500px;
+    height: 561px;
+  }
+
+  .classPriceLabel {
+    margin-right: 20.78%;
+  }
+
+  .numberOfParticipantsLabel {
+    margin-right: 0%;
+  }
+
+
+  /*--------------------
+   Person List
+   ---------------------*/
+
+   .classList {
+     display: block;
+     flex-direction: row;
+     flex-wrap: wrap;
+   }
+
+   .classList>li {
+     width: 20%;
+     flex: 1 1 25%;
+     display: inline-block;
+     margin-left: 2%;
+     margin-top: auto;
+     margin-bottom: auto;
+     height: 200px; /* Locking the height to have uniform space for notes section */
+   }
+
+   .personName {
+     display: inline-block;
+     width: 265px;
+     overflow: hidden;
+     text-overflow: ellipsis;
+   }
+
+}

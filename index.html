@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+  </head>
+  <body>
+    <header>
+      <h1>Class sign up app</h1>
+    </header>
+    <main>
+      <div class="forms">
+        <div class="signUpSheet">
+          <form class="signUpForm" action="index.html" method="post">
+            <legend><h2>Participant details</h2></legend>
+            <label for="firstNameField">First Name:</label>
+            <input type="text" name="firstName" id="firstNameField" value="">
+            <label for="lastNameField">Last Name:</label>
+            <input type="text" name="lastName" value="" id="lastNameField">
+            <label for="emailField">Email Address:</label>
+            <input id="emailField" type="email" name="email" value="">
+            <div class="payment_field">
+              <label for="paymentTypeFieldOnline">Payment Type:</label>
+              <input type="radio" id="paymentTypeFieldOnline" name="paymentType" value="Online"> <span>Online</span>
+              <input type="radio" id="paymentTypeFieldCash" name="paymentType" value="Cash"> <span>Cash</span>
+              <input type="radio" id="paymentTypeFieldCard" name="paymentType" value="Card"> <span>Card</span>
+            </div>
+            <div class="paid_field">
+              <label for="paidField">Paid?</label>
+              <input id="paidField" type="checkbox" name="paid" value="">
+            </div>
+            <div class="arrived_field">
+              <label for="arrivedField">Arrived?</label>
+              <input id="arrivedField" type="checkbox" name="arrived" value="">
+            </div>
+            <label for="notes">Notes:</label>
+            <input id="notesField" type="textarea" name="notes" value="">
+            <div class="form_buttons">
+              <button type="button" id="enterButton" name="button">Enter Person</button>
+              <button type="button" class="resetButton"name="button">Reset Person</button>
+            </div>
+          </div> <!-- End signUpSheet -->
+
+          <div class="informationSheet">
+            <form class="informationform" action="index.html" method="post">
+              <h2>Information</h2>
+              <div>
+                <label for="classPrice" class="formPadding classPriceLabel">Class Price:</label>
+                <input class="formPadding " id="classPrice" type="number" name="classPrice" value="0">
+              </div>
+              <div>
+                <label class="formPadding numberOfParticipantsLabel" for="numberOfParticipants">Number of Participants:</label>
+                <input class="formPadding" id="numberOfParticipants" type="number" name="numberOfParticipants" value="" disabled>
+                <button type="button" class="plusButton" name="plusOne">+</button>
+                <button type="button" class="plusButton" name="minusOne">-</button>
+              </div>
+              <div class="formPadding">
+                <span id="grossIncome">Total Gross Income: </span>
+              </div>
+              <div class="formPadding">
+                <span id="currentIncome">Current Income: </span>
+              </div>
+              <div class="formPadding">
+                <span id="totalArrived">Total Arrived: </span>
+              </div>
+            </form>
+          </div>
+      </div> <!-- end forms -->
+
+          <div class="classListForm">
+            <!-- EXAMPLE OF CREATED FIELD -->
+            <ul class="classList">
+              <!-- <li>
+                <button type="button" class="removeIcon" name="button">X</button>
+                <span class="personName">Jannick Moth</span>
+                <div class="classListCheckbox">
+                  <span>Paid</span><input type="checkbox" id="paid" name="paid" value="">
+                </div>
+                <div class="classListCheckbox">
+                  <span>Arrived</span><input type="checkbox" id="arrive" name="arrived" value="">
+                </div>
+                <span class="notesTitle">Notes: jdhfjhauehjd</span>
+                <p class="participantNotesField"></p>
+              </li> -->
+            </ul>
+          </div> <!-- End classList -->
+
+        </form>
+      </div> <!-- End signUpSheet-->
+    </main>
+
+    <footer>
+    </footer>
+    <script type="text/javascript" src="javascript/app.js">
+    </script>
+  </body>
+</html>
